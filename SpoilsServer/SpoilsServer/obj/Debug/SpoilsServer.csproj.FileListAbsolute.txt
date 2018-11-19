@@ -1,0 +1,6 @@
+C:\Project\Spoils\SpoilsServer\SpoilsServer\bin\Debug\SpoilsServer.exe.config
+C:\Project\Spoils\SpoilsServer\SpoilsServer\bin\Debug\SpoilsServer.exe
+C:\Project\Spoils\SpoilsServer\SpoilsServer\bin\Debug\SpoilsServer.pdb
+C:\Project\Spoils\SpoilsServer\SpoilsServer\obj\Debug\SpoilsServer.csprojResolveAssemblyReference.cache
+C:\Project\Spoils\SpoilsServer\SpoilsServer\obj\Debug\SpoilsServer.exe
+C:\Project\Spoils\SpoilsServer\SpoilsServer\obj\Debug\SpoilsServer.pdb
