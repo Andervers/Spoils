@@ -9,11 +9,23 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace SpoilsClient
 {
     public partial class ClientForm : Form
     {
+        public class Card
+        {
+            public string name;
+
+            public Card(string _name)
+            {
+                this.name = _name;
+            }
+        }
+
+
         public ClientForm()
         {
             InitializeComponent();
@@ -27,8 +39,15 @@ namespace SpoilsClient
             try
             {
                 socket.Connect(ipPoint);
+
+               
+
+
                 string message = txtText.Text;
-                byte[] data = Encoding.Unicode.GetBytes(message);
+                Card card = new Card("bobr");
+
+
+                byte[] data = Encoding.Default.GetBytes(JsonConvert.SerializeObject(card));
                 socket.Send(data);
 
               
@@ -39,7 +58,7 @@ namespace SpoilsClient
                 do
                 {
                     bytes = socket.Receive(data, data.Length, 0);
-                    builder.Append(Encoding.Unicode.GetString(data, 0, bytes));
+                    builder.Append(Encoding.Default.GetString(data, 0, bytes));
                 }
                 while (socket.Available > 0);
 

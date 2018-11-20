@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,6 +11,15 @@ namespace SpoilsServer
 {
     class Program
     {
+        public class Card
+        {
+            public string name;
+
+            public Card(string _name)
+            {
+                this.name = _name;
+            }
+        }
 
         static void Main(string[] args)
         {
@@ -33,9 +43,11 @@ namespace SpoilsServer
                     do
                     {
                         bytes = handler.Receive(data);
-                        builder.Append(Encoding.Unicode.GetString(data, 0, bytes));
+                        builder.Append(Encoding.Default.GetString(data, 0, bytes));
                     }
                     while (handler.Available > 0);
+
+                    Card p = JsonConvert.DeserializeObject<Card>(Encoding.Default.GetString(data));
 
                     Console.WriteLine(DateTime.Now.ToShortTimeString() + ": " + builder.ToString());
 

@@ -7,3 +7,5 @@ C:\Project\Spoils\SpoilsServer\SpoilsClient\SpoilsClient\SpoilsClient\obj\Debug\
 C:\Project\Spoils\SpoilsServer\SpoilsClient\SpoilsClient\SpoilsClient\obj\Debug\SpoilsClient.csproj.GenerateResource.Cache
 C:\Project\Spoils\SpoilsServer\SpoilsClient\SpoilsClient\SpoilsClient\obj\Debug\SpoilsClient.exe
 C:\Project\Spoils\SpoilsServer\SpoilsClient\SpoilsClient\SpoilsClient\obj\Debug\SpoilsClient.pdb
+C:\Project\Spoils\SpoilsServer\SpoilsClient\SpoilsClient\SpoilsClient\bin\Debug\Newtonsoft.Json.dll
+C:\Project\Spoils\SpoilsServer\SpoilsClient\SpoilsClient\SpoilsClient\bin\Debug\Newtonsoft.Json.xml
